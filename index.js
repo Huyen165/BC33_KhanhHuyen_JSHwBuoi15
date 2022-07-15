@@ -81,20 +81,23 @@ ex1();
  * OUTPUT:in ra tên và số tiền điện người đó phải trả
  */
 
-var fullName = "Nguyễn Thị Khánh Huyền";
-var kw = 500;
-var totalPrice;
-if (kw <= 50) {
-    totalPrice = 500 * kw;
-} else if (kw <= 100) {
-    totalPrice = 500 * 50 + (kw - 50) * 650;
-} else if (kw <= 200) {
-    totalPrice = 500 * 50 + 50 * 650 + (kw - 100) * 850;
-} else if (kw <= 350) {
-    totalPrice = 500 * 50 + 50 * 650 + 100 * 850 + (kw - 200) * 1100;
-} else {
-    totalPrice = 500 * 50 + 50 * 650 + 100 * 850 + 150 * 1100 + (kw - 350) * 1300;
+function ex2() {
+    var fullName = prompt("Vui lòng nhập họ tên của bạn:", "");
+    var kw = prompt("Vui lòng nhập số kw đã tiêu thụ:", "");
+    var totalPrice;
+    if (kw <= 50) {
+        totalPrice = 500 * kw;
+    } else if (kw <= 100) {
+        totalPrice = 500 * 50 + (kw - 50) * 650;
+    } else if (kw <= 200) {
+        totalPrice = 500 * 50 + 50 * 650 + (kw - 100) * 850;
+    } else if (kw <= 350) {
+        totalPrice = 500 * 50 + 50 * 650 + 100 * 850 + (kw - 200) * 1100;
+    } else {
+        totalPrice = 500 * 50 + 50 * 650 + 100 * 850 + 150 * 1100 + (kw - 350) * 1300;
+    }
+    console.log("Họ tên :", fullName);
+    console.log("Số KW tiêu dùng:", kw);
+    console.log("Số tiền phải trả: ", totalPrice);
 }
-console.log("Họ tên :", fullName);
-console.log("Số KW tiêu dùng:", kw);
-console.log("Số tiền phải trả: ", totalPrice);
+ex2();
